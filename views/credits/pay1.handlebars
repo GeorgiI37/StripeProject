@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+    <div class="col-md-6 mx-auto">
+      <div class="card">
+        <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">User Charge</h6>
+            {{!-- <form action="/credits/create-Charges" method="post">
+              <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" class="form-control" autofocus required {{email}} >
+              </div>
+              <div class="form-group">
+                  <label for="cardnumber">Card Information</label>
+                  <input type="text" name="number" class="form-control" required>
+              </div>
+              <div class="form-group row">
+                  <input type="date" name="exp" class="col-sm-6 form-control" required>
+                  <input type="text" maxlength="3" name="cvc" class="col-sm-6 form-control" required>
+              </div>
+              <div class="form-group">
+                  <label for="cardnumber">Name on card</label>
+                  <input type="text" name="namecard" class="form-control" required>
+              </div>
+              <div class="form-group">
+                  <label for="cardnumber">Country or region</label>
+                  <input type="text" name="country" class="form-control" required>
+              </div>
+              <div class="form-group">
+                  <label for="quantity">Amount</label>
+                  <input type="number" name="amount" class="form-control" required>
+              </div>
+              <button type="submit" class="col-sm-6 btn btn-primary">Pay</button>
+            </form> --}}
+
+            <form action="/credits/checkout" method="post" id="payment-form">
+              <div class="form-row">
+                <label for="card-element">
+                  Credit or debit card
+                </label>
+                <div id="card-element">
+                  <!-- A Stripe Element will be inserted here. -->
+                </div>
+
+                <!-- Used to display Element errors. -->
+                <div id="card-errors" role="alert"></div>
+              </div>
+
+              <button class="btn btn-primary">Submit Payment</button>
+            </form>
+            <script src="/js/client.js"></script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
